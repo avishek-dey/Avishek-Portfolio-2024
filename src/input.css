@@ -8,6 +8,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap');
 
 
+
+
 .icon-drift{
     @apply bg-light_bg_2/30 dark:bg-dark_bg_2/50 backdrop-blur-lg rounded-2xl border border-gray-300 dark:border-gray-700 p-5 pointer-events-none w-16 h-16 flex justify-center items-center   
 }
@@ -71,9 +73,14 @@ body{
     animation: ticker-2 25s linear infinite;
 }
 
+.ticker:hover{
+    animation: ticker-2 45s linear infinite;
+}
+
 .card{
     @apply dark:bg-dark_bg_2 bg-light_bg_2 text-dark_bg_2 dark:text-light_bg_2 space-y-6 p-8 rounded-[2rem] border border-white/10
 }
+
 .card > p{
     @apply text-dark_bg_2/70 dark:text-light_bg_2/70 
 }
@@ -93,3 +100,29 @@ section{
     @apply w-12 h-12 flex items-center justify-center rounded-xl hover:bg-dark_bg_2 hover:text-light_bg_1 dark:hover:bg-light_bg_1 dark:hover:text-brand_color_1 p-3 bg-brand_color_1
 
 }
+
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+  }
+
+  body.loaded #loader {
+    display: none;
+  }
+
+  body.loaded .content {
+    opacity: 1;
+  }
+
+  .content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
