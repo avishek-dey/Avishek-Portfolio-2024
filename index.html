@@ -11,7 +11,15 @@
     <title>Avishek - Portfolio</title>
 </head>
 <body class="bg-light_bg_1 relative dark:bg-dark_bg_1 flex flex-col items-center text-light_bg_2">
+     <!-- Loading Screen -->
+  <div id="loader" class=" absolute inset-0 z-99 flex flex-col items-center justify-center space-y-4 dark:bg-dark_bg_2 bg-light_bg_2">
+    <p class="text-[12rem] font-semibold dark:text-light_bg_2 text-dark_bg_2 " id="loading-number">1</p>
+    <p class="text-lg  uppercase tracking-tighter text-gray-500">Loading Awesomness</p>
+  </div>
+
+   <!-- Background -->
     <canvas id="dotGrid" class="absolute w-full h-screen -z-20 "></canvas>
+
     <nav class="fixed top-0 z-50 w-full ">
         <div class="max-w-6xl  mx-auto p-4">
             <div class="flex items-center justify-center gap-4">
@@ -83,11 +91,14 @@
     </nav>
     <div class="container overflow-hidden px-5">
 
+        <!-- Home section -->
         <section id="home" class="w-full h-screen text-gray-900 dark:text-light_bg_2 flex flex-col gap-4 justify-center items-center">
 
-            <div class="relative  flex justify-center flex-col">
+            <div class="relative  flex items-center justify-center flex-col">
 
-                <h6 class="tag text-3xl text-center  leading-[150%] font-serif italic px-3 py-1 rounded-xl ">Interfaces Made For Humans
+                <div class="w-14 bg-[#BCF739] h-14 aspect-square flex items-center justify-center rounded-full hover:-rotate-12 transition-all"><img src="src/assets/Memoji Boys 2-14.png" width="45px" alt=""></div>
+
+                <h6 class="tag text-xl lg:text-3xl text-center  leading-[150%] font-serif italic px-3 py-1 rounded-xl ">Interfaces Made For Humans
                 </h6>
                 <h1 class="animated-title text-[4rem] font-semibold lg:text-[6rem] uppercase  text-center tracking-tighter leading-[100%]">Designing With Purpose</h1>
 
@@ -126,8 +137,9 @@
         <div class="absolute bg-brand_color_1/50  dark:bg-brand_color_1 -z-50 blur-3xl w-24 h-24"></div>
         </section>
 
+        <!-- About section -->
         <section id="about" class="w-full py-16 bg-light_bg_1 dark:bg-dark_bg_1 flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-28">
-            <div id="image" class="relative w-full h-[20rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl  bg-no-repeat bg-center bg-cover" style="background-image: url(src/assets/image.jpg);">
+            <div id="image" class="relative hover:scale-[102%] transition-all w-full h-[20rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl  bg-no-repeat bg-center bg-cover" style="background-image: url(src/assets/image.jpg);">
                 <div id="image-div" class="image-div absolute top-[60%] right-[-4rem] lg:w-[8rem] lg:h-[8rem] rounded-[2rem] bg-light_bg_2/40 dark:bg-dark_bg_2/40 border border-light_bg_2 dark:border-light_bg_2/20 bg-no-repeat bg-center bg-cover backdrop-blur-xl p-3">
                     <div id="image" class="w-full h-full bg-slate-200 rounded-3xl bg-no-repeat bg-center bg-cover backdrop-blur-xl" style="background-image: url(src/assets/Logo\ 01.png);" ></div>
                     
@@ -150,6 +162,7 @@
             </div>
         </section>
 
+        <!-- Services section -->
         <section id="services" class="w-full h-fit py-10 flex flex-col items-center gap-6">
             <!-- <h1 class="text-5xl tracking-tighter">Services</h1> -->
             <div class="ticker-group flex  w-full">
@@ -238,6 +251,7 @@
             </div>
         </section>
 
+        <!-- Experience section -->
         <section id="experience" class="w-full h-fit py-16 flex flex-col items-center gap-12">
             <h1 class="text-5xl tracking-tighter dark:text-light_bg_2 text-dark_bg_2">Experiences</h1>
             <div class="card-group flex flex-col md:flex-row lg:flex-row gap-4">
@@ -245,7 +259,7 @@
                     <div class="space-y-2">
                         <img src="src/assets//Company Icon 1.png" alt="">
                         <h2 class="uppercase text-2xl font-semibold">Uflix Design</h2>
-                        <h5 class="uppercase text-sm tracking-wider">Graphic Designer</h5>
+                        <h5 class="uppercase text-sm opacity-50 tracking-wider">Graphic Designer</h5>
                         <h6 class="px-3 py-1 rounded-lg text-dark_bg_1 bg-white w-fit font-semibold">2018-2021</h6>
                     </div>
                     <p>In my role, I’ve specialized in web, app, and graphic design, crafting a wide range of print designs for respected businesses, educational institutions, artists, and firms. Additionally, I’ve undertaken custom illustration projects and app prototyping, diversifying my skill set to meet various client needs.</p>
@@ -254,7 +268,7 @@
                     <div class="space-y-2">
                         <img src="src/assets//Company Icon 2.png" alt="">
                         <h2 class="uppercase text-2xl font-semibold">Kimp</h2>
-                        <h5 class="uppercase text-sm tracking-wider">UI/UX Designer</h5>
+                        <h5 class="uppercase text-sm opacity-50 tracking-wider">UI/UX Designer</h5>
                         <h6 class="px-3 py-1 rounded-lg text-dark_bg_1 bg-white w-fit font-semibold">2021-2024</h6>
                     </div>
                     <p>I am currently focused on graphic design and UI/ UX design, playing a key role as a primary member of a team dedicated
@@ -264,20 +278,24 @@
                     <div class="space-y-2">
                         <img src="src/assets//Company Icon 3.png" alt="">
                         <h2 class="uppercase text-2xl font-semibold">Lollypop Design Studios</h2>
-                        <h5 class="uppercase text-sm tracking-wider">Senior UI/Ux Designer</h5>
+                        <h5 class="uppercase text-sm opacity-50 tracking-wider">Senior UI/Ux Designer</h5>
                         <h6 class="px-3 py-1 rounded-lg text-dark_bg_1 bg-white w-fit font-semibold">2024-Present</h6>
                     </div>
-                    <p>In my role, I’ve specialized in web, app, and graphic design, crafting a wide range of print designs for respected businesses, educational institutions, artists, and firms. Additionally, I’ve undertaken custom illustration projects and app prototyping, diversifying my skill set to meet various client needs.</p>
+                    <p>As a Senior UI/UX Designer, my role is to design scalable and user-friendly interfaces for renowned companies, ensuring seamless user experiences across platforms. I lead design projects from concept to delivery, working closely with cross-functional teams to align design with business goals. Additionally, I mentor junior designers and drive innovation in design strategy, contributing to the success of high-profile products. </p>
                 </div>
             </div>
         </section>
 
+        <!-- Projects section -->
         <section id="projects" class="w-full h-fit py-16 flex flex-col items-center gap-12">
             <h1 class="text-5xl tracking-tighter dark:text-light_bg_2 text-dark_bg_2">Recent Projects</h1>
             <div class="card-group flex flex-col md:flex-row lg:flex-row gap-4">
                 <div class="project w-full p-5 space-y-6">
                     <img class="rounded-xl h-[250px] " src="src/assets//saifee.png" alt="">
-                    <h1 class="uppercase font-semibold text-2xl">Landing page for a design agency</h1>
+                    <div class="space-y-2">
+                        <h4 class="uppercase text-sm opacity-50">Saifee Creations | UI Design</h4>
+                        <h1 class=" font-semibold text-2xl">Landing page for a design agency</h1>
+                    </div>
                     <a target="_blank" href="https://saifeecreations.com/">
                         <button class="bg-brand_color_1 py-4 px-6 rounded-2xl relative group/item overflow-hidden drop-shadow-sm shadow-white dark:hover:text-brand_color_1 text-white hover:text-light_bg_1">Visit Site
                             <div class="w-6 h-6 -z-10 opacity-0 bg-dark_bg_2 dark:bg-light_bg_1 absolute group-hover/item:scale-[1200%] blur-sm group-hover/item:opacity-100 transition-all"></div>
@@ -286,7 +304,10 @@
                 </div>
                 <div class="project w-full p-5 space-y-6">
                     <img class="rounded-xl h-[250px] " src="src/assets//boat.png" alt="">
-                    <h1 class="uppercase font-semibold text-2xl">Mobile app Rents boats</h1>
+                    <div class="space-y-2">
+                        <h4 class="uppercase text-sm opacity-50">Boat Rent | Case Study</h4>
+                        <h1 class=" font-semibold text-2xl">Mobile app Rents boats</h1>
+                    </div>
                     <a target="_blank" href="https://www.behance.net/gallery/148209561/Boat-Rent-UI-UX-Case-study">
                         <button class="bg-brand_color_1 py-4 px-6 rounded-2xl relative group/item overflow-hidden drop-shadow-sm shadow-white dark:hover:text-brand_color_1 text-white hover:text-light_bg_1">Visit Site
                             <div class="w-6 h-6 -z-10 opacity-0 bg-dark_bg_2 dark:bg-light_bg_1 absolute group-hover/item:scale-[1200%] blur-sm group-hover/item:opacity-100 transition-all"></div>
@@ -295,7 +316,10 @@
                 </div>
                 <div class="project w-full p-5 space-y-6">
                     <img class="rounded-xl h-[250px] " src="src/assets//relanite.png" alt="">
-                    <h1 class="uppercase font-semibold text-2xl">Mobile app that unites relatives</h1>
+                    <div class="space-y-2">
+                        <h4 class="uppercase text-sm opacity-50">Relanite | Case Study</h4>
+                        <h1 class=" font-semibold text-2xl">Mobile app that unites relatives</h1>
+                    </div>
                     <a target="_blank" href="https://www.behance.net/gallery/203206961/Relanite-App">
                         <button class="bg-brand_color_1 py-4 px-6 rounded-2xl relative group/item overflow-hidden drop-shadow-sm shadow-white dark:hover:text-brand_color_1 text-white hover:text-light_bg_1">Visit Site
                             <div class="w-6 h-6 -z-10 opacity-0 bg-dark_bg_2 dark:bg-light_bg_1 absolute group-hover/item:scale-[1200%] blur-sm group-hover/item:opacity-100 transition-all"></div>
@@ -305,21 +329,18 @@
             </div>
         </section>
 
+        <!-- BG section -->
         <section id="bg" class="w-full mb-16 h-[30vh] md:h-screen lg:h-screen bg-no-repeat bg-center bg-cover rounded-3xl lg:rounded-[4rem]" style="background-image: url(src/assets//banner.png);"></section>
 
+        <!-- Contact section -->
         <section id="contact" class="w-full h-[30vh] mb-16">
             <a target="_blank" href="mailto:deyavishek4999@gmail.com">
-                <button class="w-full h-full overflow-hidden relative rounded-3xl lg:rounded-[4rem] text-3xl group/item bg-brand_color_1">
-                    <div class=" absolute top-[45%] hover:top-[-40%] transition-all inset-0 flex flex-col gap-16 justify-start text-[3rem] lg:text-[8rem] tracking-tighter">
-                        <h1 class="text-nowrap">Contact Me</h1> <br>
-                        <h1>Let's get started</h1>
-                    </div>
+                <button class="w-full h-full overflow-hidden relative rounded-3xl lg:rounded-[4rem] text-3xl group/item transition-all bg-brand_color_1 hover:dark:bg-light_bg_2 hover:bg-dark_bg_2 hover:dark:text-brand_color_1">
+                    <h1 class="text-[4rem] uppercase tracking-tighter lg:text-[6rem]">Contact Me</h1>
                 </button>        
                 </button>
             </a>
         </section>
-
-        
 
     </div>
 
