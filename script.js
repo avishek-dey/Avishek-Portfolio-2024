@@ -157,13 +157,116 @@ gsap.from(".services", {
     stagger: 0.1,
     scrollTrigger: {
         trigger: ".services",
-        start: "top 90%", 
+        start: "top 100%", 
         end: "20px 80%", 
         // markers: true
     }
     
 
 });
+
+gsap.from(".card", { 
+    opacity:0,
+    y: 210,
+    stagger: 0.1,
+    duration: 1,
+    ease: "back.out(1.7)",
+    scrollTrigger: {
+        trigger: "#experience",
+        start: "top 80%", 
+        end: "20px 40%", 
+        // scrub: true,
+        // markers: true,
+    }
+    
+
+});
+
+gsap.from(".project", { 
+    opacity:0,
+    y: 210,
+    stagger: 0.1,
+    duration: 1,
+    ease: "back.out(1.7)",
+    scrollTrigger: {
+        trigger: "#projects",
+        start: "top 80%", 
+        end: "20px 20%", 
+        // scrub: true,
+        // markers: true,
+    }
+    
+
+});
+
+gsap.from(".tab", { 
+    opacity:0,
+    y: 210,
+    stagger: 0.1,
+    duration: 1,
+    ease: "back.out(1.7)",
+    scrollTrigger: {
+        trigger: "#freebies",
+        start: "top 80%", 
+        end: "20px 20%", 
+        // scrub: true,
+        // markers: true,
+    }
+    
+});
+
+
+// gsap.from("#bg", { 
+//     opacity:0,
+//     y: 210,
+//     stagger: 0.1,
+//     duration: 1,
+//     ease: "power2.in",
+//     scrollTrigger: {
+//         trigger: "#bg",
+//         start: "top 80%", 
+//         end: "20px 60%", 
+//         scrub: true,
+//         // markers: true,
+//     }
+    
+
+// });
+
+
+
+let loadingNumber = 1;
+const maxNumber = 100;
+const loadingElement = document.getElementById('loading-number');
+
+const interval = setInterval(() => {
+  loadingElement.innerText = loadingNumber;
+
+  if (loadingNumber >= maxNumber) {
+    clearInterval(interval);
+    document.body.classList.add('loaded');
+  }
+
+  loadingNumber += Math.floor(Math.random() * 10) + 1;
+  loadingNumber = loadingNumber > maxNumber ? maxNumber : loadingNumber;
+}, 100);
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    clearInterval(interval);
+    document.body.classList.add('loaded');
+  }, 10000); // Optional timeout to ensure the site reveals even if not fully loaded
+});
+
+
+gsap.to("#loader", { 
+    y: -2100,
+    delay: 1,
+    duration: 2,
+    }
+
+);
+
 
 
 

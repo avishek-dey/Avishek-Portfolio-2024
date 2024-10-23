@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
+    <link href="src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="shortcut icon" href="assets/Logo 01.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="src/assets/ 01.ico" type="image/x-icon">
     <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script> 
+    <link rel="shortcut icon" href="src/assets/Favicon.ico" type="image/x-icon">
     <title>Avishek - Portfolio</title>
 </head>
 <body class="bg-light_bg_1 relative dark:bg-dark_bg_1 flex flex-col items-center text-light_bg_2">
+     <!-- Loading Screen -->
+  <div id="loader" class=" absolute inset-0 z-99 flex flex-col items-center justify-center space-y-4 dark:bg-dark_bg_2 bg-light_bg_2">
+    <p class="text-[12rem] font-semibold dark:text-light_bg_2 text-dark_bg_2 " id="loading-number">1</p>
+    <p class="text-lg  uppercase tracking-tighter text-gray-500">Loading Awesomness</p>
+  </div>
+
+   <!-- Background -->
     <canvas id="dotGrid" class="absolute w-full h-screen -z-20 "></canvas>
+
     <nav class="fixed top-0 z-50 w-full ">
         <div class="max-w-6xl  mx-auto p-4">
             <div class="flex items-center justify-center gap-4">
@@ -18,7 +27,7 @@
                     <!-- Website Logo -->
                     <div class="flex items-center">
                         <a href="#" class="flex items-center py-4 px-2">
-                           <img src="assets/Logo 01.png" width="30px" alt="">
+                           <img src="src/assets/Logo 01.png" width="30px" alt="">
                         </a>
                         <h3 class="text-lg dark:text-light_bg_2 text-dark_bg_2 tracking-tighter font-medium">Avishek</h3>
                     </div>
@@ -27,7 +36,8 @@
                         <a href="#home" class="nav-link">Home</a>
                         <a href="#about" class="nav-link">About</a>
                         <a href="#services" class="nav-link">Services</a>
-                        <a href="#" class="nav-link">Contact Us</a>
+                        <a href="#experience" class="nav-link">Experiences</a>
+                        <a href="#projects" class="nav-link">Recent Projects</a>
                     </div>
                     <div class="flex items-center justify-center gap-6">
                         <button id="theme-toggle" class="w-9 h-9 flex justify-center items-center rounded-full bg-light_bg_1 dark:bg-dark_bg_1 0">
@@ -60,16 +70,35 @@
                 <li class="active"><a href="index.html" class="block text-sm px-5 py-4 rounded-2xl  text-gray-800tdark:ext-light_bg_2   bg-brand_color_1 font-semibold">Home</a></li>
                 <li><a href="#about" class="block text-sm px-5 py-4 rounded-2xl text-gray-800 dark:text-light_bg_2  hover:bg-brand_color_1 transition duration-300">About</a></li>
                 <li><a href="#services" class="block text-sm px-5 py-4 rounded-2xl text-gray-800 dark:text-light_bg_2  hover:bg-brand_color_1 transition duration-300">Services</a></li>
-                <li><a href="#contact" class="block text-sm px-5 py-4 rounded-2xl text-gray-800 dark:text-light_bg_2  hover:bg-brand_color_1 transition duration-300">Contact Us</a></li>
+                <li><a href="#experience" class="block text-sm px-5 py-4 rounded-2xl text-gray-800 dark:text-light_bg_2  hover:bg-brand_color_1 transition duration-300">Experiences</a></li>
+                <li><a href="#projects" class="block text-sm px-5 py-4 rounded-2xl text-gray-800 dark:text-light_bg_2  hover:bg-brand_color_1 transition duration-300">Recent Projects</a></li>
+                <div class="flex space-x-4">
+                    <a class="footer-icon" href="https://dribbble.com/ccage3" class="text-gray-400 hover:text-light_bg_2">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                    <a class="footer-icon" href="https://www.behance.net/creativecage" class="text-gray-400 hover:text-light_bg_2">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                    <a class="footer-icon" href="https://www.instagram.com/after_design_111/" class="text-gray-400 hover:text-light_bg_2">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="footer-icon" href="https://www.linkedin.com/in/avishek-dey3/" class="text-gray-400 hover:text-light_bg_2">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
             </ul>
         </div>
     </nav>
     <div class="container overflow-hidden px-5">
+
+        <!-- Home section -->
         <section id="home" class="w-full h-screen text-gray-900 dark:text-light_bg_2 flex flex-col gap-4 justify-center items-center">
 
-            <div class="relative  flex justify-center flex-col">
+            <div class="relative  flex items-center justify-center flex-col">
 
-                <h6 class="tag text-3xl text-center  leading-[150%] font-serif italic px-3 py-1 rounded-xl ">Interfaces Made For Humans
+                <div class="w-14 bg-brand_color_3 h-14 aspect-square flex items-center justify-center rounded-full hover:-rotate-12 transition-all"><img src="src/assets/Memoji Boys 2-14.png" width="45px" alt=""></div>
+
+                <h6 class="tag text-xl lg:text-3xl text-center  leading-[150%] font-serif italic px-3 py-1 rounded-xl ">Interfaces Made For Humans
                 </h6>
                 <h1 class="animated-title text-[4rem] font-semibold lg:text-[6rem] uppercase  text-center tracking-tighter leading-[100%]">Designing With Purpose</h1>
 
@@ -108,23 +137,32 @@
         <div class="absolute bg-brand_color_1/50  dark:bg-brand_color_1 -z-50 blur-3xl w-24 h-24"></div>
         </section>
 
-        <section id="about" class="w-full h-screen bg-light_bg_1 dark:bg-dark_bg_1 flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-28 py-6">
-            <div id="image" class="relative w-full h-[20rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl  bg-no-repeat bg-center bg-cover" style="background-image: url(assets/image.jpg);">
+        <!-- About section -->
+        <section id="about" class="w-full py-16 bg-light_bg_1 dark:bg-dark_bg_1 flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-28">
+            <div id="image" class="relative hover:scale-[102%] transition-all w-full h-[20rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl  bg-no-repeat bg-center bg-cover" style="background-image: url(src/assets/Image.jpg);">
                 <div id="image-div" class="image-div absolute top-[60%] right-[-4rem] lg:w-[8rem] lg:h-[8rem] rounded-[2rem] bg-light_bg_2/40 dark:bg-dark_bg_2/40 border border-light_bg_2 dark:border-light_bg_2/20 bg-no-repeat bg-center bg-cover backdrop-blur-xl p-3">
-                    <div id="image" class="w-full h-full bg-slate-200 rounded-3xl bg-no-repeat bg-center bg-cover backdrop-blur-xl" style="background-image: url(assets/Logo\ 01.png);" ></div>
+                    <div id="image" class="w-full h-full bg-slate-200 rounded-3xl bg-no-repeat bg-center bg-cover backdrop-blur-xl" style="background-image: url(src/assets/Logo\ 01.png);" ></div>
                     
                 </div>
             </div>
-        <div class="w-full lg:w-[40%] space-y-4">
+        <div class="w-full lg:w-[40%] flex flex-col gap-4">
                 <h2 class="text-4xl lg:text-6xl font-semibold text-dark_bg_2 dark:text-light_bg_2">Hi there
                     I’m Avishek
                     </h2>
                 <p class=" font-thin text-dark_bg_2/80 dark:text-light_bg_2/80">I'm an India-based Graphic Designer with expertise in UX Design, Print Media, Branding, Social media designs, and Illustrations. With 5 years of industry experience, I'm recognized for creatively addressing visual challenges. My Psychology degree enhances my understanding of human behavior for targeted design. I've collaborated with creative teams for promotional and user experience design.
 
                 </p>
+                <a target="_blank" href="https://www.playbook.com/s/abhishake/isVBNAM2oV7KJWkTvjcZZZJL?assetToken=y9FXmvGbP8HLnuBqbuYnCS5v">
+                    <button class="bg-brand_color_1 py-4 px-6 rounded-2xl relative group/item overflow-hidden drop-shadow-sm shadow-white dark:hover:text-brand_color_1 hover:text-light_bg_1 ">
+                        <h3 class="z-10">Download Resume</h3>
+                        <div class="w-6 h-6 -z-10 opacity-0 bg-dark_bg_2 dark:bg-light_bg_1 absolute group-hover/item:scale-[1200%] blur-sm group-hover/item:opacity-100 transition-all"></div>
+                    </button>
+                </a>
+                    
             </div>
         </section>
 
+        <!-- Services section -->
         <section id="services" class="w-full h-fit py-10 flex flex-col items-center gap-6">
             <!-- <h1 class="text-5xl tracking-tighter">Services</h1> -->
             <div class="ticker-group flex  w-full">
@@ -213,72 +251,182 @@
             </div>
         </section>
 
-        <section id="experience" class="w-full py-16 flex flex-col items-center gap-6">
+        <!-- Experience section -->
+        <section id="experience" class="w-full h-fit py-16 flex flex-col items-center gap-12">
             <h1 class="text-5xl tracking-tighter dark:text-light_bg_2 text-dark_bg_2">Experiences</h1>
             <div class="card-group flex flex-col md:flex-row lg:flex-row gap-4">
                 <div class="card">
                     <div class="space-y-2">
-                        <img src="assets/Company Icon 1.png" alt="">
+                        <img src="src/assets//Company Icon 1.png" alt="">
                         <h2 class="uppercase text-2xl font-semibold">Uflix Design</h2>
-                        <h5 class="uppercase text-sm tracking-wider">Graphic Designer</h5>
+                        <h5 class="uppercase text-sm opacity-50 tracking-wider">Graphic Designer</h5>
                         <h6 class="px-3 py-1 rounded-lg text-dark_bg_1 bg-white w-fit font-semibold">2018-2021</h6>
                     </div>
                     <p>In my role, I’ve specialized in web, app, and graphic design, crafting a wide range of print designs for respected businesses, educational institutions, artists, and firms. Additionally, I’ve undertaken custom illustration projects and app prototyping, diversifying my skill set to meet various client needs.</p>
                 </div>
                 <div class="card">
                     <div class="space-y-2">
-                        <img src="assets/Company Icon 2.png" alt="">
+                        <img src="src/assets//Company Icon 2.png" alt="">
                         <h2 class="uppercase text-2xl font-semibold">Kimp</h2>
-                        <h5 class="uppercase text-sm tracking-wider">UI/UX Designer</h5>
+                        <h5 class="uppercase text-sm opacity-50 tracking-wider">UI/UX Designer</h5>
                         <h6 class="px-3 py-1 rounded-lg text-dark_bg_1 bg-white w-fit font-semibold">2021-2024</h6>
                     </div>
-                    <p>In my role, I’ve specialized in web, app, and graphic design, crafting a wide range of print designs for respected businesses, educational institutions, artists, and firms. Additionally, I’ve undertaken custom illustration projects and app prototyping, diversifying my skill set to meet various client needs.</p>
+                    <p>I am currently focused on graphic design and UI/ UX design, playing a key role as a primary member of a team dedicated
+                        to user interface design and user experience research. I’m also in line for a team leader position, where take on additional                        responsibilities such as managing the team and ensuring the quality of each project through meticulous oversight.</p>
                 </div>
                 <div class="card">
                     <div class="space-y-2">
-                        <img src="assets/Company Icon 3.png" alt="">
+                        <img src="src/assets//Company Icon 3.png" alt="">
                         <h2 class="uppercase text-2xl font-semibold">Lollypop Design Studios</h2>
-                        <h5 class="uppercase text-sm tracking-wider">Senior UI/Ux Designer</h5>
+                        <h5 class="uppercase text-sm opacity-50 tracking-wider">Senior UI/Ux Designer</h5>
                         <h6 class="px-3 py-1 rounded-lg text-dark_bg_1 bg-white w-fit font-semibold">2024-Present</h6>
                     </div>
-                    <p>In my role, I’ve specialized in web, app, and graphic design, crafting a wide range of print designs for respected businesses, educational institutions, artists, and firms. Additionally, I’ve undertaken custom illustration projects and app prototyping, diversifying my skill set to meet various client needs.</p>
+                    <p>As a Senior UI/UX Designer, my role is to design scalable and user-friendly interfaces for renowned companies, ensuring seamless user experiences across platforms. I lead design projects from concept to delivery, working closely with cross-functional teams to align design with business goals. Additionally, I mentor junior designers and drive innovation in design strategy, contributing to the success of high-profile products. </p>
                 </div>
             </div>
         </section>
 
+        <!-- Projects section -->
+        <section id="projects" class="w-full h-fit py-16 flex flex-col items-center gap-12">
+            <h1 class="text-5xl tracking-tighter dark:text-light_bg_2 text-dark_bg_2">Recent Projects</h1>
+            <div class="card-group flex flex-col md:flex-row lg:flex-row gap-4">
+                <div class="project w-full p-5 space-y-6">
+                    <img class="rounded-xl h-[250px] " src="src/assets//saifee.png" alt="">
+                    <div class="space-y-2">
+                        <h4 class="uppercase text-sm opacity-50">Saifee Creations | UI Design</h4>
+                        <h1 class=" font-semibold text-2xl">Landing page for a design agency</h1>
+                    </div>
+                    <a target="_blank" href="https://saifeecreations.com/">
+                        <button class="bg-brand_color_1 py-4 px-6 rounded-2xl relative group/item overflow-hidden drop-shadow-sm shadow-white dark:hover:text-brand_color_1 text-white hover:text-light_bg_1">Visit Site
+                            <div class="w-6 h-6 -z-10 opacity-0 bg-dark_bg_2 dark:bg-light_bg_1 absolute group-hover/item:scale-[1200%] blur-sm group-hover/item:opacity-100 transition-all"></div>
+                        </button>
+                    </a>
+                </div>
+                <div class="project w-full p-5 space-y-6">
+                    <img class="rounded-xl h-[250px] " src="src/assets//boat.png" alt="">
+                    <div class="space-y-2">
+                        <h4 class="uppercase text-sm opacity-50">Boat Rent | Case Study</h4>
+                        <h1 class=" font-semibold text-2xl">Mobile app Rents boats</h1>
+                    </div>
+                    <a target="_blank" href="https://www.behance.net/gallery/148209561/Boat-Rent-UI-UX-Case-study">
+                        <button class="bg-brand_color_1 py-4 px-6 rounded-2xl relative group/item overflow-hidden drop-shadow-sm shadow-white dark:hover:text-brand_color_1 text-white hover:text-light_bg_1">Visit Site
+                            <div class="w-6 h-6 -z-10 opacity-0 bg-dark_bg_2 dark:bg-light_bg_1 absolute group-hover/item:scale-[1200%] blur-sm group-hover/item:opacity-100 transition-all"></div>
+                        </button>
+                    </a>
+                </div>
+                <div class="project w-full p-5 space-y-6">
+                    <img class="rounded-xl h-[250px] " src="src/assets//relanite.png" alt="">
+                    <div class="space-y-2">
+                        <h4 class="uppercase text-sm opacity-50">Relanite | Case Study</h4>
+                        <h1 class=" font-semibold text-2xl">Mobile app that unites relatives</h1>
+                    </div>
+                    <a target="_blank" href="https://www.behance.net/gallery/203206961/Relanite-App">
+                        <button class="bg-brand_color_1 py-4 px-6 rounded-2xl relative group/item overflow-hidden drop-shadow-sm shadow-white dark:hover:text-brand_color_1 text-white hover:text-light_bg_1">Visit Site
+                            <div class="w-6 h-6 -z-10 opacity-0 bg-dark_bg_2 dark:bg-light_bg_1 absolute group-hover/item:scale-[1200%] blur-sm group-hover/item:opacity-100 transition-all"></div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Freebies section -->
+        <section id="freebies" class="w-full py-16 flex flex-col items-center gap-12">
+            <h1 class="text-5xl tracking-tighter dark:text-light_bg_2 text-dark_bg_2">Freebies</h1>
+            <div class="tab-group flex flex-wrap gap-4">
+                    <a class="tab" target="_blank" href="https://avishek-dey.github.io/design-like-magic/">
+                        <div class="tab-image">
+                            <img src="src/assets/Book.png" alt="image" width="80px">
+                        </div>
+                        <div class="tab-text free_ebook space-y-3">
+                            <h3>Design Like Magic</h3>
+                            <div class="free">FREE</div>
+                        </div>
+                    </a>
+                
+                    <a class="tab" target="_blank" href="https://afterdeath.gumroad.com/l/gradientwallpaper">
+                        <div class="tab-image">
+                            <img src="src/assets/gradient.jpg" alt="image" width="80px">
+                        </div>
+                        <div class="tab-text free_ebook space-y-3">
+                            <h3>Gradient Wallpapers</h3>
+                            <div class="free">FREE</div>
+                        </div>
+                    </a>
+                
+                
+                    <a class="tab" target="_blank" href="https://afterdeath.gumroad.com/l/naruto-wallpaper">
+                        <div class="tab-image">
+                            <img src="src/assets/naruto.jpg" alt="image" width="80px">
+                        </div>
+                        <div class="tab-text free_ebook space-y-3">
+                            <h3>Naruto Wallpaper</h3>
+                            <div class="free">FREE</div>
+                        </div>
+                        
+                    </a>
+               
+                
+                    <a class="tab"  target="_blank"href="https://afterdeath.gumroad.com/l/patternplayvol1">
+                        <div class="tab-image">
+                            <img src="src/assets/PP.jpg" alt="image" width="80px" height="80px">
+                        </div>
+                        <div class="tab-text free_ebook space-y-3">
+                            <h3>Pattern Play</h3>
+                            <div class="free">FREE</div>
+                        </div>
+                        
+                    </a>
+                
+            </div>
+        </section>
+
+        <!-- BG section -->
+        <section id="bg" class="w-full mb-16 h-[30vh] md:h-screen lg:h-screen bg-no-repeat bg-center bg-cover rounded-3xl lg:rounded-[4rem]" style="background-image: url(src/assets//banner.png);"></section>
+
+        <!-- Contact section -->
+        <section id="contact" class="w-full h-[30vh] mb-16">
+            <a target="_blank" href="mailto:deyavishek4999@gmail.com">
+                <button class="w-full h-full overflow-hidden relative rounded-3xl lg:rounded-[4rem] text-3xl group/item transition-all bg-brand_color_1 hover:dark:bg-light_bg_2 hover:bg-dark_bg_2 hover:dark:text-brand_color_1">
+                    <h1 class="text-[4rem] uppercase tracking-tighter lg:text-[6rem]">Contact Me</h1>
+                </button>        
+                </button>
+            </a>
+        </section>
+
     </div>
 
-    <footer class="bg-gray-800 text-light_bg_2 w-full">
+    <footer class="dark:bg-dark_bg_1 bg-light_bg_1 border-t dark:border-dark_bg_2 border-light_bg_2 text-light_bg_2 w-full">
         <div class="max-w-6xl mx-auto px-4 py-10">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
                     <a href="#" class="flex items-center">
-                        <span class="text-2xl font-bold">Logo</span>
+                        <span class="text-2xl font-bold"><img src="src/assets/Logo 01.png" width="45px" alt=""></span>
                     </a>
                 </div>
                 <div class="flex flex-wrap justify-center mb-6 md:mb-0">
-                    <a href="#" class="text-gray-400 hover:text-light_bg_2 px-3 py-2">Home</a>
-                    <a href="#" class="text-gray-400 hover:text-light_bg_2 px-3 py-2">About</a>
-                    <a href="#" class="text-gray-400 hover:text-light_bg_2 px-3 py-2">Services</a>
-                    <a href="#" class="text-gray-400 hover:text-light_bg_2 px-3 py-2">Contact</a>
+                    <a href="#home" class="text-gray-400 hover:text-light_bg_2 px-3 py-2">Home</a>
+                    <a href="#about" class="text-gray-400 hover:text-light_bg_2 px-3 py-2">About</a>
+                    <a href="#services" class="text-gray-400 hover:text-light_bg_2 px-3 py-2">Services</a>
+                    <a href="#experience" class="text-gray-400 hover:text-light_bg_2 px-3 py-2">Experience</a>
+                    <a href="#projects" class="text-gray-400 hover:text-light_bg_2 px-3 py-2">Recent Projects</a>
                 </div>
                 <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-light_bg_2">
-                        <i class="fab fa-facebook-f"></i>
+                    <a class="footer-icon" href="https://dribbble.com/ccage3" class="text-gray-400 hover:text-light_bg_2">
+                        <i class="fab fa-dribbble"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-light_bg_2">
-                        <i class="fab fa-twitter"></i>
+                    <a class="footer-icon" href="https://www.behance.net/creativecage" class="text-gray-400 hover:text-light_bg_2">
+                        <i class="fab fa-behance"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-light_bg_2">
+                    <a class="footer-icon" href="https://www.instagram.com/after_design_111/" class="text-gray-400 hover:text-light_bg_2">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-light_bg_2">
+                    <a class="footer-icon" href="https://www.linkedin.com/in/avishek-dey3/" class="text-gray-400 hover:text-light_bg_2">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
-                <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+            <div class="border-t dark:border-dark_bg_2 border-light_bg_2 mt-8 pt-8 text-sm text-center">
+                <p class="dark:text-light_bg_1 text-dark_bg_1">&copy; 2024 Avishek. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -286,7 +434,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
