@@ -301,7 +301,7 @@ Shery.makeMagnet(".big-button" /* Element to target.*/, {
   });
 
 
-  Shery.imageMasker(" .project" /* Element to target.*/, {
+  Shery.imageMasker(" .photos" /* Element to target.*/, {
     //Parameters are optional.
     mouseFollower: true,
   text: "View Projects",
